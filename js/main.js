@@ -34,7 +34,20 @@ const app = new Vue({
         
     },
     methods: {
-
+        previous(){
+            if(this.active == 0){
+                this.active =  this.items.length - 1;
+            }else{
+                this.active--
+            }
+        },
+        next(items){
+            if(this.active == this.items.length - 1){
+                this.active = 0;
+            }else{
+                this.active++
+            }
+        }
     }
 
   })
