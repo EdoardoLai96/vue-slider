@@ -29,9 +29,6 @@
     object-fit: cover;
 }
 
-.item.active {
-    display: block;
-}
 
 .item .text {
     position: absolute;
