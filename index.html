@@ -19,10 +19,11 @@
             </div> 
            
         </div>
-        <div class="thumbs">
+        <div @mousemove ="stopAutoPlay" @mouseleave ="autoPlay" class="thumbs">
             <div @click="previous" class="prev"></div>
             <div @click="next" class="next"></div>
-            <div v-for ="(item, index) in items" class="thumb" :class="index == active? 'active': ''">
+
+            <div v-for ="(item, index) in items" @click="makeActive(index)" class="thumb" :class="index == active? 'active': ''">
                 <img :src = "item.url">
             </div> 
         </div>
